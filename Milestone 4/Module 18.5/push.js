@@ -1,3 +1,4 @@
+//New element can be added to an array using push() method
 const age = []; // we can declare empty array
 const numbers = [12, 87, 98, 45];
 console.log(numbers);
