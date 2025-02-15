@@ -6,7 +6,7 @@ const num4 = 33;
 const num5 = 55;
 
 //We can declare a single array variable to contain more values
-const numbers = [12, 22, 11, 33, 55]; // elements of an array are seperated by comma
+const numbers = [12, 22, 11, 33, 55]; // elements of an array are seperated by comma under one box / square bracket []
 console.log(numbers);
 
 //Arrays can contain strings
