@@ -1,4 +1,4 @@
-//Element can be removed using pop() method
+//Element can be removed using pop() method from last index
 const friends = ["Balam", "Kalam", "Salam", "Gelam", "Pailam"];
 friends.push("Khailam");
 console.log(friends);
