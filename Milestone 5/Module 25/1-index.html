@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/1-styles.css" />
+    <style>
+      li {
+        color: tomato;
+      }
+    </style>
+    <title>Tour of DOM</title>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+    </header>
+    <main>
+      <p>My awesome DOM</p>
+      <ul>
+        <li>Jalali set</li>
+        <li>Shafayet</li>
+        <li>Bonobash</li>
+      </ul>
+    </main>
+    <script src="./js/1-dom.js"></script>
+    <script>
+      const student = {
+        name: "ABUL",
+        id: 11,
+        study: function (time) {
+          console.log(time, `He is studying ${time} hours`);
+        },
+      };
+      console.log("Adding JS Inside the HTML file");
+
+      const liCollection = document.getElementsByTagName("li");
+      console.log(liCollection);
+
+      for (const li of liCollection) {
+        console.log(li);
+        console.log(li.innerText);
+      }
+
+      const allHeadings = document.getElementsByTagName("h1");
+      console.log(allHeadings);
+
+      for (const heading of allHeadings) {
+        console.log(heading);
+        console.log(heading.innerText);
+      }
+    </script>
+  </body>
+</html>
