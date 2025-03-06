@@ -1,7 +1,7 @@
 //Double quote or single quote vs backtick for template literal
 //Double quote or single quote for normal string, doesn't take multiple line and variable
 //Backtick for template string, takes multiple line and variable with automatic line break
-//Bactcik is used for showing other variables values in the string using ${variableName}
+//Bactcik is used for showing other variable's value in the string using ${variableName}
 
 // const anthem = "Amar Sonar Bangla
 // Ami Tomay Bhalobashi"; // error
