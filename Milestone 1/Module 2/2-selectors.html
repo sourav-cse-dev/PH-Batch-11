@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /* class selector */
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+
+      /* id selector */
+      #main-heading {
+        color: blue;
+        font-size: 24px;
+      }
+      #intro-paragraph {
+        background-color: yellow;
+        padding: 10px;
+      }
+      /* element or type selectors */
+      h2 {
+        color: blue;
+      }
+      p {
+        font-size: 16px;
+      }
+      a {
+        text-decoration: none;
+        color: red;
+      }
+
+      /* universal selector */
+      * {
+        margin: 10;
+        padding: 10;
+      }
+      /* grouping selectors */
+      a,
+      button {
+        background-color: yellow;
+        padding: 10px;
+      }
+      /* attribute selector */
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+      }
+      input[required] {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- class selector -->
+    <p class="highlight">class of "hightlight".</p>
+    <p>does not have any specific class.</p>
+    <p class="highlight">a class of "highlight".</p>
+
+    <!-- id selector -->
+    <h1 id="main-heading">This h1 has an id</h1>
+    <p>This paragraph does not have an id.</p>
+    <p id="intro-paragraph">This paragraph has an id</p>
+
+    <!-- element or type selectors -->
+    <h2>Welcome to my website</h2>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph.</p>
+    <a href="https://www.google.com">Visit example website</a>
+    <br />
+
+    <!-- universal selector -->
+    <!-- no specific element, it applies to all elements universally. -->
+
+    <!-- grouping selectors -->
+    <a href="#">Click me</a>
+    <button>Submit</button>
+
+    <!-- attribute selectors -->
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
