@@ -6,7 +6,10 @@
     <title>React</title>
   </head>
 
-  <div class="myDiv"></div>
+  <div id="myDivRootShow"></div>
+  <div id="myDivRootShowJSX"></div>
+  <div id="myDivRootShowJSXFunction"></div>
+
   <script
     crossorigin
     src="https://unpkg.com/react@18/umd/react.development.js"
@@ -15,6 +18,10 @@
     crossorigin
     src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
   ></script>
-  <script src="./react.js"></script>
-  <body></body>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="./react.js"></script>
+
+  <body>
+    <!-- <div>Hello React</div> -->
+  </body>
 </html>
