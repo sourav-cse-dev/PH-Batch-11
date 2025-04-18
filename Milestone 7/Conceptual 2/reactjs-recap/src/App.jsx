@@ -20,6 +20,12 @@ const App = () => {
     console.log(buttonRef2);
   };
 
+  const [name, setName] = useState("");
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log(name);
+  };
+
   return (
     <div className="flex flex-col justify-center items-center m-10">
       <p>Total Clicked {counter}</p>
@@ -30,7 +36,7 @@ const App = () => {
         Click Me
       </button>
 
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <input
           className="input input-primary"
           type="text"
@@ -45,11 +51,25 @@ const App = () => {
         >
           Submit
         </button>
+      </form> */}
+
+      <form onSubmit={handleLogin}>
+        <input
+          className="input input-primary"
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Your Name"
+        />
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
       </form>
 
-      <button ref={buttonRef} onClick={handleClick} className="btn btn-primary">
+      {/* <button ref={buttonRef} onClick={handleClick} className="btn btn-primary">
         Click me
-      </button>
+      </button> */}
     </div>
   );
 };
