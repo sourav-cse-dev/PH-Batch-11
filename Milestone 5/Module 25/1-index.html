@@ -4,27 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/1-styles.css" />
+    <title>Tour of DOM</title>
     <style>
       li {
         color: tomato;
       }
+      #fruits-title {
+        color: blue;
+      }
+      .important-places {
+        color: blueviolet;
+      }
     </style>
-    <title>Tour of DOM</title>
   </head>
   <body>
     <header>
       <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia libero
+        repudiandae veniam voluptates vero iure vitae aperiam quo pariatur alias
+        voluptatum dolorum sint quidem, eveniet nulla numquam molestias cumque
+        sed?
+      </p>
     </header>
     <main>
       <p>My awesome DOM</p>
-      <ul>
-        <li>Jalali set</li>
-        <li>Shafayet</li>
-        <li>Bonobash</li>
-      </ul>
+      <section>
+        <h1>My DOM</h1>
+        <ul>
+          <li>Jalali set</li>
+          <li>Shafayet</li>
+          <li>Bonobash</li>
+          <li>DOM de re baba</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Carrot</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+          <li class="important-places">Sundorban</li>
+          <li class="important-places">Bandorban</li>
+          <li class="important-places">Katabon</li>
+          <li>Shalbon</li>
+        </ul>
+      </section>
     </main>
     <script src="./js/1-dom.js"></script>
     <script>
+      console.log("Adding JS Inside the HTML file");
       const student = {
         name: "ABUL",
         id: 11,
@@ -32,13 +66,12 @@
           console.log(time, `He is studying ${time} hours`);
         },
       };
-      console.log("Adding JS Inside the HTML file");
 
       const liCollection = document.getElementsByTagName("li");
       console.log(liCollection);
 
       for (const li of liCollection) {
-        console.log(li);
+        // console.log(li);
         console.log(li.innerText);
       }
 
@@ -48,6 +81,16 @@
       for (const heading of allHeadings) {
         console.log(heading);
         console.log(heading.innerText);
+      }
+
+      console.log(document.getElementById("places-title"));
+      console.log(document.getElementById("places-title").innerText);
+      document.getElementById("places-title").innerText = "My tour list";
+
+      console.log(document.getElementsByClassName("important-places"));
+      for (let places of document.getElementsByClassName("important-places")) {
+        // console.log(places);
+        console.log(places.innerText);
       }
     </script>
   </body>
