@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./styles/1-styles.css" />
     <title>Tour of DOM</title>
     <style>
-      li {
+      .fruits-container li {
         color: tomato;
       }
       #fruits-title {
@@ -38,7 +38,7 @@
           <li>DOM de re baba</li>
         </ul>
       </section>
-      <section>
+      <section class="fruits-container">
         <h1 id="fruits-title">Fruits I like</h1>
         <ul>
           <li>Apple</li>
@@ -67,6 +67,7 @@
         },
       };
 
+      // option - 1 : getElementByTagName()
       const liCollection = document.getElementsByTagName("li");
       console.log(liCollection);
 
@@ -83,15 +84,36 @@
         console.log(heading.innerText);
       }
 
+      // option - 2 : getElementById()
       console.log(document.getElementById("places-title"));
       console.log(document.getElementById("places-title").innerText);
       document.getElementById("places-title").innerText = "My tour list";
 
+      // option - 3 : getElementsByClassName()
       console.log(document.getElementsByClassName("important-places"));
       for (let places of document.getElementsByClassName("important-places")) {
         // console.log(places);
         console.log(places.innerText);
       }
+
+      // option - 4 : quesrySelectorAll()
+      console.log(document.querySelectorAll("#fruits-title"));
+      console.log(document.querySelectorAll(".fruits-container"));
+      console.log(document.querySelectorAll(".fruits-container li"));
+
+      const someList = document.querySelectorAll(".fruits-container li");
+      console.log(someList);
+      for (let list of someList) {
+        console.log(list);
+        console.log(list.innerText);
+      }
+
+      // option - 5 : quesrySelector()
+      console.log(document.querySelector(".fruits-container li"));
+
+      // NodelIst vs HTMLCollection
+      // Nodelist : static
+      // HTMLCollection : live
     </script>
   </body>
 </html>
