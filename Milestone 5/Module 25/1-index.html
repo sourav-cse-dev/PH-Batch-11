@@ -27,7 +27,7 @@
         sed?
       </p>
     </header>
-    <main>
+    <main id="main-container">
       <p>My awesome DOM</p>
       <section>
         <h1>My DOM</h1>
@@ -50,7 +50,7 @@
       </section>
       <section id="places-container">
         <h1 id="places-title">Places I like to visit</h1>
-        <ul>
+        <ul id="places-list">
           <li class="important-places">Sundorban</li>
           <li class="important-places">Bandorban</li>
           <li class="important-places">Katabon</li>
@@ -58,7 +58,7 @@
         </ul>
       </section>
     </main>
-    <script src="./js/1-dom.js"></script>
+
     <script>
       // console.log("Adding JS Inside the HTML file");
       const student = {
@@ -149,5 +149,7 @@
       title.classList.add("purple-bg");
       // console.log(title.classList);
     </script>
+    <script src="./js/2-append.js"></script>
+    <script src="./js/1-dom.js"></script>
   </body>
 </html>
