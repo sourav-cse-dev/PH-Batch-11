@@ -39,14 +39,16 @@
         </ul>
       </section>
       <section class="fruits-container">
-        <h1 id="fruits-title">Fruits I like</h1>
+        <h1 id="fruits-title" class="some-class random-class blue-bg">
+          Fruits I like
+        </h1>
         <ul>
           <li>Apple</li>
           <li>Banana</li>
           <li>Carrot</li>
         </ul>
       </section>
-      <section>
+      <section id="places-container">
         <h1 id="places-title">Places I like to visit</h1>
         <ul>
           <li class="important-places">Sundorban</li>
@@ -58,62 +60,94 @@
     </main>
     <script src="./js/1-dom.js"></script>
     <script>
-      console.log("Adding JS Inside the HTML file");
+      // console.log("Adding JS Inside the HTML file");
       const student = {
         name: "ABUL",
         id: 11,
         study: function (time) {
-          console.log(time, `He is studying ${time} hours`);
+          // console.log(time, `He is studying ${time} hours`);
         },
       };
 
-      // option - 1 : getElementByTagName()
+      // option - 1 : getElementsByTagName()
       const liCollection = document.getElementsByTagName("li");
-      console.log(liCollection);
+      // console.log(liCollection);
 
       for (const li of liCollection) {
         // console.log(li);
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
 
       const allHeadings = document.getElementsByTagName("h1");
-      console.log(allHeadings);
+      // console.log(allHeadings);
 
       for (const heading of allHeadings) {
-        console.log(heading);
-        console.log(heading.innerText);
+        // console.log(heading);
+        // console.log(heading.innerText);
       }
 
       // option - 2 : getElementById()
-      console.log(document.getElementById("places-title"));
-      console.log(document.getElementById("places-title").innerText);
+      //console.log(document.getElementById("places-title"));
+      // console.log(document.getElementById("places-title").innerText);
       document.getElementById("places-title").innerText = "My tour list";
 
       // option - 3 : getElementsByClassName()
-      console.log(document.getElementsByClassName("important-places"));
+      // console.log(document.getElementsByClassName("important-places"));
       for (let places of document.getElementsByClassName("important-places")) {
         // console.log(places);
-        console.log(places.innerText);
+        // console.log(places.innerText);
       }
 
       // option - 4 : quesrySelectorAll()
-      console.log(document.querySelectorAll("#fruits-title"));
-      console.log(document.querySelectorAll(".fruits-container"));
-      console.log(document.querySelectorAll(".fruits-container li"));
+      // console.log(document.querySelectorAll("#fruits-title"));
+      // console.log(document.querySelectorAll(".fruits-container"));
+      // console.log(document.querySelectorAll(".fruits-container li"));
 
       const someList = document.querySelectorAll(".fruits-container li");
-      console.log(someList);
+      // console.log(someList);
       for (let list of someList) {
-        console.log(list);
-        console.log(list.innerText);
+        // console.log(list);
+        // console.log(list.innerText);
       }
 
       // option - 5 : quesrySelector()
-      console.log(document.querySelector(".fruits-container li"));
+      // console.log(document.querySelector(".fruits-container li"));
 
       // NodelIst vs HTMLCollection
       // Nodelist : static
-      // HTMLCollection : live
+      // HTMLCollection : live / dynamic
+
+      //Styling
+      document.getElementById("fruits-title").style.backgroundColor = "yellow";
+
+      // setting attribute
+      document
+        .getElementById("fruits-title")
+        .setAttribute("title", "Tootltip Set by JS");
+
+      // document.getElementsByClassName("fruits-container")[0].innerHTML =
+      //   "<span>new title</span>";
+      // console.log(
+      //   document.getElementsByClassName("fruits-container")[0].innerHTML
+      // );
+
+      // getting attribute
+      const title = document.getElementById("fruits-title");
+      // console.log(title.getAttribute("id"));
+      // console.log(title.getAttribute("class"));
+      // console.log(title.classList);
+
+      // console.log(
+      //   document.getElementsByClassName("fruits-container")[0].innerHTML
+      // );
+
+      // removing class
+      title.classList.remove("blue-bg");
+      // console.log(title.classList);
+
+      // adding class
+      title.classList.add("purple-bg");
+      // console.log(title.classList);
     </script>
   </body>
 </html>
